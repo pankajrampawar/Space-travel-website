@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Navbar(location) {
+export default function Navbar(props) {
 
-    const atPage = location;
+    const atPage = props.location;
 
     const navigate = useNavigate();
 
@@ -32,24 +32,28 @@ export default function Navbar(location) {
                     className='left-0 flex flex-col gap-4 sm:flex-row sm:justify-evenly'
                 >
                     <li>
-                        <span>
-                            <span className='sm:hidden md:inline-block font-bold mr-2'>00 </span>
+                        <span className={`navHeading relative ${atPage === 1 ? 'atPage': ''}`}>
+                            <span className={`sm:hidden md:inline-block font-bold mr-2 ${atPage === 1 ? 'atPage': ''}`}>00 </span>
                             <span onClick={()=>{navigate('/')}}>HOME</span>
                         </span>
                     </li>
                     <li>
-                        <span className='sm:hidden  md:inline-block font-bold mr-2'>01 </span>
-                        <span onClick={()=>navigate('/destination')}>DESTINATION</span>
+                        <span className={`navHeading relative ${atPage === 2 ? 'atPage': ''}`}>
+                            <span className='sm:hidden  md:inline-block font-bold mr-2'>01 </span>
+                            <span onClick={()=>navigate('/destination')}>DESTINATION</span>
+                        </span>
                     </li>
                     <li>
-                        
-                        <span className='sm:hidden md:inline-block font-bold mr-2'>02 </span>
-                        <span onClick={()=>{navigate('/crew')}}>CREW</span>
-
+                        <span className={`navHeading relative ${atPage === 3 ? 'atPage': ''}`}>
+                            <span className='sm:hidden md:inline-block font-bold mr-2'>02 </span>
+                            <span onClick={()=>{navigate('/crew')}}>CREW</span>
+                        </span>
                     </li>
                     <li>
-                        <span className='sm:hidden md:inline-block font-bold mr-2'>03 </span>
-                        <span onClick={()=>navigate('/technology')}>TECHNOLOGY</span>
+                        <span className={`navHeading relative ${atPage === 4 ? 'atPage': ''}`}>
+                            <span className='sm:hidden md:inline-block font-bold mr-2'>03 </span>
+                            <span onClick={()=>navigate('/technology')}>TECHNOLOGY</span>
+                        </span>
                     </li>
                 </ul>
             </div>

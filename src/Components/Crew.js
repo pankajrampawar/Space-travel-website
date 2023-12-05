@@ -51,14 +51,14 @@ export default function Crew() {
 
         <header className='relative z-20'>
             <nav>
-                <Navbar/>
+                <Navbar location={3}/>
             </nav>
         </header>
 
         <main className='lg:absolute relative z-10 white flex flex-col items-center px-5 gap-6 
                         lg:items-start lg:flex-wrap lg:justify-evenly  lg:bottom-0 lg:w-5/6 lg:left-0 lg:right-0 lg:m-auto'>
             
-            <section className='text-lg h5 tracking-widest md:order-1 md:self-start sm:pt-4'>
+            <section className='text-lg h5 tracking-widest md:order-1 md:self-start sm:pt-10'>
                 <p><span className='text-gray-500 mr-2'>02</span>MEET YOUR CREW`</p>
             </section>
 

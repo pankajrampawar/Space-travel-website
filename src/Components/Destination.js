@@ -45,7 +45,7 @@ export default function Destination() {
         </div>
             
         <header className='z-20 relative'>
-            <Navbar/>
+            <Navbar location={2}/>
         </header>
 
         <main className='relative z-10 text-white sm:mt-6 md:mt-0 flex flex-col gap-4 items-center lg:flex-row lg:h-full lg:items-center pb-20 lg:px-6 lg:justify-center lg:gap-10'>

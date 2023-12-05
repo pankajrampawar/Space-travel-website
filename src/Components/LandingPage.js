@@ -18,7 +18,7 @@ export default function LandingPage() {
 
         <header className='z-10 relative text-white'>
             <nav>
-                <Navbar location={0}/>
+                <Navbar location={1}/>
             </nav>
         </header>
 
